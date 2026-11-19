@@ -1,0 +1,34 @@
+{
+  "slides": [
+    { "id": "s01", "type": "story", "title": "Hello, I\u2019m Liam!", "text": "Hello, I\u2019m Liam! Today, I\u2019m going to the zoo with my parents", "speakText": "Hello, I'm Liam! Today, I'm going to the zoo with my parents", "bg": "#2563eb", "emoji": "\ud83e\udc47\u200d\ud83c\udff3\u200d\ud83e\udc40\u200d\ud83e\udc47" },
+    { "id": "s02", "type": "story", "title": "Father & Mother", "text": "Father \u00b7 Mother", "speakText": "Father. Mother.", "bg": "#2563eb", "emoji": "\ud83e\udc47\u200d\ud83c\udff3\u200d\ud83e\udc40\u200d\ud83e\udc47" },
+    { "id": "s03", "type": "story", "title": "Let\u2019s go!!!", "text": "Let\u2019s go!!!", "speakText": "Let's go!!!", "bg": "#2563eb", "emoji": "\ud83c\udf69" },
+    { "id": "s04", "type": "quiz", "title": "Traffic Light \u2014 Red", "text": "Look at the traffic light!! What is the color?", "speakText": "Traffic light. The light is red.", "options": [ { "label": "Red", "correct": true }, { "label": "Yellow", "correct": false }, { "label": "Green", "correct": false } ], "correctText": "Jawaban benar: Red", "bg": "#dc2626", "emoji": "\ud83d\udea6" },
+    { "id": "s05", "type": "quiz", "title": "Traffic Light \u2014 Yellow", "text": "Look at the traffic light!! What is the color?", "speakText": "Traffic light. The light is yellow.", "options": [ { "label": "Red", "correct": false }, { "label": "Yellow", "correct": true }, { "label": "Green", "correct": false } ], "correctText": "Jawaban benar: Yellow", "bg": "#d97706", "emoji": "\ud83d\udea6" },
+    { "id": "s06", "type": "quiz", "title": "Traffic Light \u2014 Green", "text": "Look at the traffic light!! What is the color?", "speakText": "Traffic light. The light is green.", "options": [ { "label": "Red", "correct": false }, { "label": "Yellow", "correct": false }, { "label": "Green", "correct": true } ], "correctText": "Jawaban benar: Green", "bg": "#15803d", "emoji": "\ud83d\udea6" },
+    { "id": "s08", "type": "story", "title": "Sampai di Kebun Binatang", "text": "Yeay!!! We are arrive >.<", "speakText": "Yeay! We are arrive at the zoo!", "bg": "#15803d", "emoji": "\ud83e\udd92" },
+    { "id": "s09", "type": "map", "title": "Peta \u2014 Pilih Area", "text": "Pilih area wisata:", "choices": [ { "label": "Air Paradise", "target": 8 }, { "label": "Wild Safari", "target": 11 }, { "label": "Sea World", "target": 15 } ], "bg": "#0369a1", "emoji": "\ud83d\uddfe\ufe0f" },
+    { "id": "s09-1", "type": "quiz", "title": "What is this animal?", "text": "What is this animal?", "speakText": "What is this animal?", "options": [ { "label": "swan", "correct": true }, { "label": "rabbit", "correct": false } ], "correctText": "Jawaban benar: swan", "bg": "#2563eb", "emoji": "\ud83e\udda2" },
+    { "id": "s10", "type": "quiz", "title": "Butterfly", "text": "What is this animal?", "speakText": "What is this animal?", "options": [ { "label": "butterfly", "correct": true }, { "label": "bird", "correct": false } ], "correctText": "Jawaban benar: butterfly", "bg": "#2563eb", "emoji": "\ud83e\udd8b" },
+    { "id": "s11", "type": "map", "title": "Peta \u2014 Pilih Area", "text": "Pilih area wisata:", "choices": [ { "label": "Air Paradise", "target": 8 }, { "label": "Wild Safari", "target": 11 }, { "label": "Sea World", "target": 15 } ], "bg": "#0369a1", "emoji": "\ud83d\uddfe\ufe0f" },
+    { "id": "s11-1", "type": "quiz", "title": "Elephant", "text": "Is the elephant big or small?", "speakText": "Is the elephant big or small?", "options": [ { "label": "Big", "correct": true }, { "label": "small", "correct": false } ], "correctText": "Jawaban benar: Big", "bg": "#2563eb", "emoji": "\ud83e\udd71" },
+    { "id": "s12", "type": "quiz", "title": "Leopard", "text": "What does the animal beside it eat?", "speakText": "What does the animal beside it eat?", "options": [ { "label": "meat", "correct": true }, { "label": "grass", "correct": false } ], "correctText": "Jawaban benar: meat", "bg": "#2563eb", "emoji": "\ud83e\udda9" },
+    { "id": "s13", "type": "quiz", "title": "Giraffe", "text": "Is the giraffe tall?", "speakText": "Is the giraffe tall?", "options": [ { "label": "Yes", "correct": true }, { "label": "No", "correct": false } ], "correctText": "Jawaban benar: Yes", "bg": "#2563eb", "emoji": "\ud83e\udd92" },
+    { "id": "s14", "type": "map", "title": "Peta \u2014 Pilih Area", "text": "Pilih area wisata:", "choices": [ { "label": "Air Paradise", "target": 8 }, { "label": "Wild Safari", "target": 11 }, { "label": "Sea World", "target": 15 } ], "bg": "#0369a1", "emoji": "\ud83d\uddfe\ufe0f" },
+    { "id": "s14-1", "type": "story", "title": "Kosakata \u2014 Monkey", "text": "monkey", "speakText": "Monkey", "bg": "#2563eb", "emoji": "\ud83e\udda0" },
+    { "id": "s15", "type": "story", "title": "Kosakata \u2014 Sea World", "text": "turtle \u00b7 dolphin \u00b7 whale", "speakText": "Turtle. Dolphin. Whale.", "bg": "#0369a1", "emoji": "\ud83c\udf0a" },
+    { "id": "s16", "type": "ending", "title": "THANK YOU", "text": "Terima kasih telah bermain!", "speakText": "Thank you!", "bg": "#6b21a8", "emoji": "\ud83c\udf89" }
+  ],
+  "settings": {
+    "pin": "1234",
+    "requirePin": true,
+    "voiceLang": "auto",
+    "autoRead": true,
+    "pointsCorrect": 10,
+    "pointsRetry": 5,
+    "autoNextDelay": 2,
+    "wrongMode": "retry",
+    "wrongVoice": "Oops! Try again.",
+    "correctVoice": "Correct! Great job!"
+  }
+}

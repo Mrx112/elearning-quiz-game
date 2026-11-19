@@ -1,0 +1,6 @@
+node_modules/
+.env
+.env.local
+vendor/
+*.php~
+data/slides.json.backup*

@@ -1,0 +1,305 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>Panduan Aset Canva</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@page {
+  size: A4;
+  margin: 18mm 17mm 20mm 17mm;
+  @bottom-left { content: "Petualangan Kuis · T1126-046 (REQ-9724)"; font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+  @bottom-right { content: "Halaman " counter(page) " / " counter(pages); font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+}
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif; font-size: 10.2pt; line-height: 1.55; color: #1e1b3a; margin: 0; }
+h1, h2, h3, h4 { font-family: 'Fredoka', 'Nunito', 'Segoe UI', sans-serif; color: #3b1f8f; line-height: 1.25; break-after: avoid; }
+h1 { font-size: 21pt; margin: 0 0 4mm; padding-bottom: 3mm; border-bottom: 3px solid #7c3aed; }
+h2 { font-size: 14.5pt; margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 4px solid #f59e0b; }
+h3 { font-size: 11.5pt; margin: 5mm 0 2mm; color: #5b21b6; }
+h4 { font-size: 10.5pt; margin: 4mm 0 1.5mm; }
+p { margin: 0 0 2.5mm; }
+a { color: #6d28d9; text-decoration: none; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+li { margin: 0.6mm 0; }
+blockquote { margin: 3mm 0; padding: 2.5mm 4mm; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 0 6px 6px 0; color: #3f3a5c; }
+blockquote p { margin: 0; }
+code { font-family: Consolas, 'Cascadia Mono', monospace; font-size: 8.8pt; background: #f1effa; padding: 0.3mm 1.2mm; border-radius: 3px; color: #4c1d95; }
+pre { background: #1e1b2e; color: #ece9ff; padding: 3.5mm 4mm; border-radius: 8px; font-size: 8pt; line-height: 1.45; white-space: pre; overflow: hidden; break-inside: avoid; }
+pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; break-inside: auto; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { background: #5b21b6; color: #fff; text-align: left; padding: 2mm 2.5mm; font-weight: 800; }
+td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #e4e1f2; vertical-align: top; }
+tr:nth-child(even) td { background: #faf9ff; }
+hr { border: 0; border-top: 1px dashed #d6d1ee; margin: 5mm 0; }
+.doc-meta { display: flex; gap: 3mm; flex-wrap: wrap; margin: -1mm 0 5mm; }
+.doc-meta span { font-size: 8.5pt; font-weight: 800; color: #5b21b6; background: #ede9fe; padding: 1mm 2.5mm; border-radius: 99px; }
+</style></head><body><h1>Panduan Aset Canva — Petualangan Kuis</h1><div class="doc-meta"><span>T1126-046 (REQ-9724)</span><span>Panduan Aset Canva</span><span>18 November 2026</span></div>
+<p>Dokumen ini untuk <strong>desainer / klien</strong> yang menyiapkan gambar di Canva.
+Cukup ekspor file sesuai tabel, beri nama persis sama, dan kirimkan (atau taruh langsung
+di folder <code>public/assets/canva/</code>). Tidak perlu mengubah kode.</p>
+<blockquote>
+<p><strong>Semua slot bersifat opsional.</strong> Selama sebuah file belum ada, game tetap tampil rapi
+dengan gaya bawaan. Begitu file dimasukkan, tampilan otomatis berganti ke desain Canva.</p>
+</blockquote>
+<hr />
+<h2>1. Daftar Aset &amp; Ukuran</h2>
+<h3>A. Latar Belakang — <code>public/assets/canva/backgrounds/</code></h3>
+<table>
+<thead>
+<tr>
+<th>Nama file</th>
+<th>Ukuran Canva</th>
+<th>Format</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>bg-main.png</code></td>
+<td><strong>1920 × 1080</strong></td>
+<td>PNG / JPG</td>
+<td>Latar layar laptop/tablet landscape. Tempatkan elemen penting di tengah; tepi bisa terpotong di layar dengan rasio berbeda. Hindari teks.</td>
+</tr>
+<tr>
+<td><code>bg-mobile.png</code></td>
+<td><strong>1080 × 1920</strong></td>
+<td>PNG / JPG</td>
+<td><em>Opsional.</em> Latar versi HP (potret). Jika tidak ada, HP memakai <code>bg-main.png</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3>B. Identitas &amp; UI — <code>public/assets/canva/ui/</code></h3>
+<table>
+<thead>
+<tr>
+<th>Nama file</th>
+<th>Ukuran Canva</th>
+<th>Format</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>logo.png</code></td>
+<td><strong>1200 × 400</strong></td>
+<td>PNG transparan</td>
+<td>Logo / judul game di layar awal. Mengganti judul teks bawaan.</td>
+</tr>
+<tr>
+<td><code>card-frame.png</code></td>
+<td>Desain <strong>800 × 450</strong>, ekspor <strong>2×</strong> → <strong>1600 × 900</strong></td>
+<td>PNG transparan</td>
+<td>Bingkai kartu soal. <strong>Sisakan ±9% area kosong</strong> di kiri-kanan dan ±8% di atas-bawah — teks soal &amp; gambar diletakkan di area tengah. Bagian tengah sebaiknya berwarna terang (teks soal berwarna gelap).</td>
+</tr>
+<tr>
+<td><code>btn-option-1.png</code></td>
+<td><strong>800 × 200</strong></td>
+<td>PNG transparan</td>
+<td>Tombol pilihan <strong>A</strong> (bawaan: merah ▲).</td>
+</tr>
+<tr>
+<td><code>btn-option-2.png</code></td>
+<td><strong>800 × 200</strong></td>
+<td>PNG transparan</td>
+<td>Tombol pilihan <strong>B</strong> (bawaan: biru ◆).</td>
+</tr>
+<tr>
+<td><code>btn-option-3.png</code></td>
+<td><strong>800 × 200</strong></td>
+<td>PNG transparan</td>
+<td>Tombol pilihan <strong>C</strong> (bawaan: kuning ●).</td>
+</tr>
+<tr>
+<td><code>btn-option-4.png</code></td>
+<td><strong>800 × 200</strong></td>
+<td>PNG transparan</td>
+<td>Tombol pilihan <strong>D</strong> (bawaan: hijau ■).</td>
+</tr>
+<tr>
+<td><code>btn-primary.png</code></td>
+<td><strong>600 × 160</strong></td>
+<td>PNG transparan</td>
+<td>Tombol utama (Mulai Belajar, Kunci Jawaban, Main Lagi).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Catatan tombol:</strong>
+- Teks jawaban &amp; teks tombol ditulis oleh game (warna <strong>putih</strong>), jadi <strong>jangan tulis teks di gambar tombol</strong>.
+- Gunakan warna tombol yang cukup gelap/jenuh agar teks putih terbaca.
+- Kosongkan area <strong>±80 px di kiri</strong> (ikon bentuk ▲◆●■) dan <strong>±80 px di kanan</strong> (ikon speaker 🔊) pada tombol pilihan.
+- Gambar tombol akan direntangkan mengikuti ukuran tombol — pertahankan rasio <strong>4:1</strong> agar tidak gepeng.</p>
+<h3>C. Karakter / Maskot — <code>public/assets/canva/characters/</code></h3>
+<table>
+<thead>
+<tr>
+<th>Nama file</th>
+<th>Ukuran Canva</th>
+<th>Format</th>
+<th>Muncul saat</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mascot-idle.png</code></td>
+<td><strong>512 × 512</strong></td>
+<td>PNG transparan</td>
+<td>Layar awal (melayang pelan).</td>
+</tr>
+<tr>
+<td><code>mascot-happy.png</code></td>
+<td><strong>512 × 512</strong></td>
+<td>PNG transparan</td>
+<td>Jawaban benar.</td>
+</tr>
+<tr>
+<td><code>mascot-sad.png</code></td>
+<td><strong>512 × 512</strong></td>
+<td>PNG transparan</td>
+<td>Jawaban salah / waktu habis (sebaiknya ekspresi menyemangati, bukan menangis).</td>
+</tr>
+</tbody>
+</table>
+<h3>D. Penghargaan — <code>public/assets/canva/badges/</code></h3>
+<table>
+<thead>
+<tr>
+<th>Nama file</th>
+<th>Ukuran Canva</th>
+<th>Format</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>badge-gold.png</code></td>
+<td><strong>512 × 512</strong></td>
+<td>PNG transparan</td>
+<td>Akurasi ≥ 80% (3 bintang).</td>
+</tr>
+<tr>
+<td><code>badge-silver.png</code></td>
+<td><strong>512 × 512</strong></td>
+<td>PNG transparan</td>
+<td>Akurasi ≥ 50% (2 bintang).</td>
+</tr>
+<tr>
+<td><code>badge-bronze.png</code></td>
+<td><strong>512 × 512</strong></td>
+<td>PNG transparan</td>
+<td>Akurasi &lt; 50%.</td>
+</tr>
+<tr>
+<td><code>star-on.png</code></td>
+<td><strong>256 × 256</strong></td>
+<td>PNG transparan</td>
+<td>Bintang menyala.</td>
+</tr>
+<tr>
+<td><code>star-off.png</code></td>
+<td><strong>256 × 256</strong></td>
+<td>PNG transparan</td>
+<td>Bintang redup / kosong.</td>
+</tr>
+</tbody>
+</table>
+<h3>E. Ilustrasi Soal — <code>public/assets/canva/questions/</code></h3>
+<table>
+<thead>
+<tr>
+<th>Nama file</th>
+<th>Ukuran Canva</th>
+<th>Format</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q1.png</code> … <code>q5.png</code></td>
+<td><strong>1200 × 675</strong></td>
+<td>PNG / JPG</td>
+<td>Rasio 16:9. Satu gambar per soal (nama mengikuti <code>id</code> soal). Jika tidak ada, game menampilkan emoji.</td>
+</tr>
+</tbody>
+</table>
+<h3>F. Audio (opsional) — <code>public/assets/audio/</code></h3>
+<table>
+<thead>
+<tr>
+<th>Folder</th>
+<th>Contoh nama</th>
+<th>Format</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>voice/</code></td>
+<td><code>q1.mp3</code>, <code>q1-explain.mp3</code></td>
+<td>MP3 (128 kbps, mono)</td>
+<td>Rekaman suara pembaca soal/penjelasan. Jika tidak ada → dibacakan otomatis oleh Text-to-Speech.</td>
+</tr>
+<tr>
+<td><code>sfx/</code></td>
+<td><code>correct.mp3</code>, <code>wrong.mp3</code>, <code>win.mp3</code>, <code>click.mp3</code></td>
+<td>MP3 / WAV</td>
+<td>Efek suara custom. Jika tidak ada → memakai synthesizer bawaan.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>File audio perlu didaftarkan di <code>src/data/questionsData.js</code> (suara soal) atau
+<code>src/config/gameConfig.js</code> → <code>SFX_FILES</code> (efek suara). Lihat README.</p>
+</blockquote>
+<hr />
+<h2>2. Cara Ekspor dari Canva</h2>
+<ol>
+<li>Buat desain dengan <strong>Custom size</strong> sesuai tabel (mis. 800 × 200 px).</li>
+<li>Klik <strong>Share → Download</strong>.</li>
+<li>Pilih <strong>PNG</strong>, centang <strong>Transparent background</strong> (perlu Canva Pro) untuk semua aset "PNG transparan".</li>
+<li>Untuk <code>card-frame.png</code>, atur <strong>Size × 2</strong> agar tajam di layar retina.</li>
+<li>Untuk latar (<code>bg-*.png</code>) boleh pilih <strong>JPG</strong> kualitas ±80% agar file lebih kecil
+   — tetapi ubah juga ekstensi di <code>gameConfig.js</code> (mis. <code>bg-main.jpg</code>).</li>
+<li>Ganti nama file sesuai tabel (huruf kecil semua, pakai tanda hubung).</li>
+</ol>
+<h2>3. Batas Ukuran File (agar game cepat dimuat)</h2>
+<table>
+<thead>
+<tr>
+<th>Jenis aset</th>
+<th>Target maksimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Latar belakang</td>
+<td>≤ 400 KB</td>
+</tr>
+<tr>
+<td>Frame / tombol</td>
+<td>≤ 150 KB</td>
+</tr>
+<tr>
+<td>Maskot / badge</td>
+<td>≤ 120 KB</td>
+</tr>
+<tr>
+<td>Ilustrasi soal</td>
+<td>≤ 250 KB</td>
+</tr>
+</tbody>
+</table>
+<p>Bila terlalu besar, kompres dengan <a href="https://tinypng.com">tinypng.com</a> sebelum dikirim.</p>
+<h2>4. Checklist Pengiriman Aset</h2>
+<ul>
+<li>☐ <code>backgrounds/bg-main.png</code> (1920×1080)</li>
+<li>☐ <code>backgrounds/bg-mobile.png</code> (1080×1920) — opsional</li>
+<li>☐ <code>ui/logo.png</code> (1200×400)</li>
+<li>☐ <code>ui/card-frame.png</code> (1600×900)</li>
+<li>☐ <code>ui/btn-option-1.png</code> s.d. <code>btn-option-4.png</code> (800×200)</li>
+<li>☐ <code>ui/btn-primary.png</code> (600×160)</li>
+<li>☐ <code>characters/mascot-idle.png</code>, <code>mascot-happy.png</code>, <code>mascot-sad.png</code> (512×512)</li>
+<li>☐ <code>badges/badge-gold.png</code>, <code>badge-silver.png</code>, <code>badge-bronze.png</code> (512×512)</li>
+<li>☐ <code>badges/star-on.png</code>, <code>star-off.png</code> (256×256)</li>
+<li>☐ <code>questions/q1.png</code> … <code>q5.png</code> (1200×675)</li>
+</ul></body></html>

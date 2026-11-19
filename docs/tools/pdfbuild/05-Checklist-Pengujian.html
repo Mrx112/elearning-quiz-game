@@ -1,0 +1,259 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>Checklist Pengujian</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@page {
+  size: A4;
+  margin: 18mm 17mm 20mm 17mm;
+  @bottom-left { content: "Petualangan Kuis · T1126-046 (REQ-9724)"; font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+  @bottom-right { content: "Halaman " counter(page) " / " counter(pages); font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+}
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif; font-size: 10.2pt; line-height: 1.55; color: #1e1b3a; margin: 0; }
+h1, h2, h3, h4 { font-family: 'Fredoka', 'Nunito', 'Segoe UI', sans-serif; color: #3b1f8f; line-height: 1.25; break-after: avoid; }
+h1 { font-size: 21pt; margin: 0 0 4mm; padding-bottom: 3mm; border-bottom: 3px solid #7c3aed; }
+h2 { font-size: 14.5pt; margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 4px solid #f59e0b; }
+h3 { font-size: 11.5pt; margin: 5mm 0 2mm; color: #5b21b6; }
+h4 { font-size: 10.5pt; margin: 4mm 0 1.5mm; }
+p { margin: 0 0 2.5mm; }
+a { color: #6d28d9; text-decoration: none; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+li { margin: 0.6mm 0; }
+blockquote { margin: 3mm 0; padding: 2.5mm 4mm; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 0 6px 6px 0; color: #3f3a5c; }
+blockquote p { margin: 0; }
+code { font-family: Consolas, 'Cascadia Mono', monospace; font-size: 8.8pt; background: #f1effa; padding: 0.3mm 1.2mm; border-radius: 3px; color: #4c1d95; }
+pre { background: #1e1b2e; color: #ece9ff; padding: 3.5mm 4mm; border-radius: 8px; font-size: 8pt; line-height: 1.45; white-space: pre; overflow: hidden; break-inside: avoid; }
+pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; break-inside: auto; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { background: #5b21b6; color: #fff; text-align: left; padding: 2mm 2.5mm; font-weight: 800; }
+td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #e4e1f2; vertical-align: top; }
+tr:nth-child(even) td { background: #faf9ff; }
+hr { border: 0; border-top: 1px dashed #d6d1ee; margin: 5mm 0; }
+.doc-meta { display: flex; gap: 3mm; flex-wrap: wrap; margin: -1mm 0 5mm; }
+.doc-meta span { font-size: 8.5pt; font-weight: 800; color: #5b21b6; background: #ede9fe; padding: 1mm 2.5mm; border-radius: 99px; }
+</style></head><body><h1>Checklist Pengujian — T1126-046 (REQ-9724)</h1><div class="doc-meta"><span>T1126-046 (REQ-9724)</span><span>Checklist Pengujian</span><span>18 November 2026</span></div>
+<p>Status per 18 November 2026. Kolom <strong>Hasil</strong>: ✅ lulus · ⏳ menunggu materi klien · ☐ belum diuji.</p>
+<h2>1. Quiz Engine</h2>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Skenario</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1</td>
+<td>Start Screen tampil; nama pemain opsional; tombol "Mulai Belajar" membuka soal 1</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.2</td>
+<td>Soal pilihan ganda dengan 2, 3, dan 4 opsi tampil dengan layout yang sesuai</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.3</td>
+<td>Jawaban benar → panel hijau "Benar!", konfeti, suara <em>ding</em>, poin bertambah</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.4</td>
+<td>Jawaban salah → panel merah bergetar "Kurang Tepat!", suara <em>buzz</em>, jawaban benar ditunjukkan</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.5</td>
+<td>Setelah menjawab, pilihan lain terkunci (tidak bisa jawab dua kali)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.6</td>
+<td>Waktu habis → dihitung salah, tampil "Waktu Habis!"</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.7</td>
+<td>Skor: bonus kecepatan &amp; bonus beruntun dihitung; badge "2× beruntun" tampil</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.8</td>
+<td>Result Screen: total skor, jumlah benar/salah, akurasi, bintang, badge, papan peringkat</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.9</td>
+<td>"Review Jawaban" menampilkan jawaban pemain vs jawaban benar + penjelasan</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>1.10</td>
+<td>"Main Lagi" memulai ulang dari soal 1 dengan skor 0</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>1.11</td>
+<td>Tombol keluar (✕) menampilkan konfirmasi; "Ya, keluar" kembali ke Start Screen</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>1.12</td>
+<td>Keyboard: angka 1–4 memilih, Enter mengunci, Enter lagi lanjut soal</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h2>2. Audio Interaktif</h2>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Skenario</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2.1</td>
+<td>Sentuh teks soal → dibacakan; teks menyala kuning selama dibacakan</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2.2</td>
+<td>Sentuh pilihan jawaban / ikon speaker → pilihan dibacakan</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2.3</td>
+<td>Penjelasan &amp; jawaban benar di panel feedback bisa disentuh untuk dibacakan</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2.4</td>
+<td>Timer berhenti saat suara dibacakan</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>Soal otomatis dibacakan saat muncul</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2.6</td>
+<td>Bahasa "Otomatis": soal Indonesia dibaca suara Indonesia, "Cat/Dog/Bird" dibaca suara Inggris</td>
+<td>☐ (uji dengar di perangkat klien)</td>
+</tr>
+<tr>
+<td>2.7</td>
+<td>Toggle SFX &amp; Suara Pembaca mematikan suara masing-masing</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>2.8</td>
+<td>File audio klien (.mp3) diputar bila tersedia; jika gagal → otomatis Text-to-Speech</td>
+<td>⏳ menunggu file audio klien</td>
+</tr>
+</tbody>
+</table>
+<h2>3. Aset Canva</h2>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Skenario</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.1</td>
+<td>Tanpa aset: seluruh tampilan memakai gaya bawaan dan tetap rapi</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>3.2</td>
+<td>Aset klien dimasukkan → otomatis menggantikan gaya bawaan</td>
+<td>⏳ menunggu aset klien</td>
+</tr>
+<tr>
+<td>3.3</td>
+<td>Teks soal/tombol tetap terbaca di atas desain Canva klien</td>
+<td>⏳ menunggu aset klien</td>
+</tr>
+</tbody>
+</table>
+<h2>4. Responsif &amp; Browser</h2>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Perangkat / Lebar</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4.1</td>
+<td>Desktop / laptop (≥ 1280 px) — Chrome</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4.2</td>
+<td>HP 375 px (ukuran iPhone) — Start, Soal, Feedback; tanpa scroll horizontal</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>4.3</td>
+<td>Tablet (768–1024 px)</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>4.4</td>
+<td>HP Android asli — Chrome</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>4.5</td>
+<td>iPhone asli — Safari (cek suara dengan mode senyap mati)</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<h2>5. Deployment</h2>
+<table>
+<thead>
+<tr>
+<th>No</th>
+<th>Skenario</th>
+<th>Hasil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.1</td>
+<td><code>npm run build</code> berhasil tanpa error</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>5.2</td>
+<td>Folder <code>dist/</code> dibuka dari subfolder hosting (path relatif)</td>
+<td>☐</td>
+</tr>
+<tr>
+<td>5.3</td>
+<td>Website online (Netlify / Vercel / GitHub Pages) dapat dibuka via HTTPS</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+<h2>Catatan</h2>
+<ul>
+<li>Bug ditemukan &amp; diperbaiki saat pengujian: menekan <strong>Enter</strong> untuk mengunci jawaban ikut
+  melewati panel feedback. Sudah diperbaiki dan diuji ulang.</li>
+<li>Penyesuaian tampilan HP: maskot &amp; judul panel feedback diperkecil agar judul muat satu baris.</li>
+</ul></body></html>

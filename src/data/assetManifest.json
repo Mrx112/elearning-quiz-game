@@ -1,0 +1,2002 @@
+{
+ "s01": {
+  "folder": "slide 1",
+  "reference": "reference/s01.jpg",
+  "elements": {
+   "ayah": {
+    "src": "s01/ayah.webp",
+    "box": [
+     810,
+     431,
+     1128,
+     1058
+    ]
+   },
+   "liam": {
+    "src": "s01/liam.webp",
+    "box": [
+     1121,
+     633,
+     1358,
+     1038
+    ]
+   },
+   "ibu": {
+    "src": "s01/ibu.webp",
+    "box": [
+     1430,
+     436,
+     1674,
+     1028
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {
+   "kalimat": [
+    1160,
+    105,
+    1756,
+    305
+   ]
+  },
+  "library": [
+   {
+    "name": "anak",
+    "file": "anak .jpg",
+    "src": "library/s01/anak.webp",
+    "box": [
+     1121,
+     633,
+     1358,
+     1038
+    ]
+   },
+   {
+    "name": "awan",
+    "file": "awan .jpg",
+    "src": "library/s01/awan.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     925
+    ]
+   },
+   {
+    "name": "ayah",
+    "file": "ayah.jpg",
+    "src": "library/s01/ayah.webp",
+    "box": [
+     810,
+     431,
+     1128,
+     1058
+    ]
+   },
+   {
+    "name": "ibu",
+    "file": "ibu .JPG",
+    "src": "library/s01/ibu.webp",
+    "box": [
+     1430,
+     436,
+     1674,
+     1028
+    ]
+   },
+   {
+    "name": "kalimat",
+    "file": "kalimat .jpg",
+    "src": "library/s01/kalimat.webp",
+    "box": [
+     1160,
+     105,
+     1756,
+     305
+    ]
+   },
+   {
+    "name": "rumah",
+    "file": "rumah .jpg",
+    "src": "library/s01/rumah.webp",
+    "box": [
+     0,
+     103,
+     801,
+     925
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput .jpeg",
+    "src": "library/s01/rumput.webp",
+    "box": [
+     0,
+     843,
+     1920,
+     1080
+    ]
+   }
+  ],
+  "bg": "s01/bg.webp"
+ },
+ "s02": {
+  "folder": "slide 2",
+  "reference": "reference/s02.jpg",
+  "elements": {
+   "ayah": {
+    "src": "s02/ayah.webp",
+    "box": [
+     68,
+     168,
+     529,
+     1077
+    ]
+   },
+   "ibu": {
+    "src": "s02/ibu.webp",
+    "box": [
+     1348,
+     144,
+     1732,
+     1075
+    ]
+   },
+   "bubble-ayah": {
+    "src": "s02/bubble-ayah.webp",
+    "box": [
+     473,
+     86,
+     1000,
+     300
+    ]
+   },
+   "bubble-ibu": {
+    "src": "s02/bubble-ibu.webp",
+    "box": [
+     805,
+     315,
+     1331,
+     529
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {},
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan .jpg",
+    "src": "library/s02/awan.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     925
+    ]
+   },
+   {
+    "name": "ayah",
+    "file": "ayah .jpg",
+    "src": "library/s02/ayah.webp",
+    "box": [
+     810,
+     431,
+     1128,
+     1058
+    ]
+   },
+   {
+    "name": "bubble-percakapan-ayah",
+    "file": "bubble percakapan ayah.jpg",
+    "src": "library/s02/bubble-percakapan-ayah.webp",
+    "box": [
+     473,
+     86,
+     1000,
+     300
+    ]
+   },
+   {
+    "name": "bubble-percakapan-ibu",
+    "file": "bubble percakapan ibu.jpg",
+    "src": "library/s02/bubble-percakapan-ibu.webp",
+    "box": [
+     805,
+     315,
+     1331,
+     529
+    ]
+   },
+   {
+    "name": "ibu",
+    "file": "ibu .JPG",
+    "src": "library/s02/ibu.webp",
+    "box": [
+     1430,
+     436,
+     1674,
+     1028
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput .jpeg",
+    "src": "library/s02/rumput.webp",
+    "box": [
+     0,
+     843,
+     1920,
+     1080
+    ]
+   }
+  ],
+  "bg": "s02/bg.webp"
+ },
+ "s03": {
+  "folder": "slide 3",
+  "reference": "reference/s03.jpg",
+  "elements": {
+   "mobil": {
+    "src": "s03/mobil.webp",
+    "box": [
+     784,
+     504,
+     1812,
+     972
+    ]
+   },
+   "bubble": {
+    "src": "s03/bubble.webp",
+    "box": [
+     1327,
+     171,
+     1767,
+     548
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {},
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan .jpg",
+    "src": "library/s03/awan.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     925
+    ]
+   },
+   {
+    "name": "bubble-percakapan",
+    "file": "bubble percakapan .jpg",
+    "src": "library/s03/bubble-percakapan.webp",
+    "box": [
+     1327,
+     171,
+     1767,
+     548
+    ]
+   },
+   {
+    "name": "mobil",
+    "file": "mobil .jpg",
+    "src": "library/s03/mobil.webp",
+    "box": [
+     784,
+     504,
+     1812,
+     972
+    ]
+   },
+   {
+    "name": "rumah",
+    "file": "rumah .jpg",
+    "src": "library/s03/rumah.webp",
+    "box": [
+     0,
+     103,
+     801,
+     925
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput .jpeg",
+    "src": "library/s03/rumput.webp",
+    "box": [
+     0,
+     843,
+     1920,
+     1080
+    ]
+   }
+  ],
+  "bg": "s03/bg.webp"
+ },
+ "s04": {
+  "folder": "slide 4",
+  "reference": "reference/s04.jpg",
+  "elements": {
+   "lampu": {
+    "src": "s04/lampu.webp",
+    "box": [
+     1018,
+     361,
+     1411,
+     825
+    ]
+   },
+   "panah": {
+    "src": "s04/panah.webp",
+    "box": [
+     1090,
+     222,
+     1330,
+     360
+    ]
+   },
+   "mobil": {
+    "src": "s04/mobil.webp",
+    "box": [
+     1,
+     664,
+     676,
+     972
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {
+   "kalimat": [
+    441,
+    219,
+    1007,
+    325
+   ]
+  },
+  "library": [
+   {
+    "name": "background",
+    "file": "background.jpg",
+    "src": "library/s04/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "kalimat",
+    "file": "kalimat .jpg",
+    "src": "library/s04/kalimat.webp",
+    "box": [
+     441,
+     219,
+     1007,
+     325
+    ]
+   },
+   {
+    "name": "lampu-lalu-lintas-merah",
+    "file": "lampu lalu lintas merah .jpg",
+    "src": "library/s04/lampu-lalu-lintas-merah.webp",
+    "box": [
+     1018,
+     361,
+     1411,
+     825
+    ]
+   },
+   {
+    "name": "mobil",
+    "file": "mobil .jpg",
+    "src": "library/s04/mobil.webp",
+    "box": [
+     1,
+     664,
+     676,
+     972
+    ]
+   },
+   {
+    "name": "panah",
+    "file": "panah .jpg",
+    "src": "library/s04/panah.webp",
+    "box": [
+     1090,
+     222,
+     1330,
+     360
+    ]
+   }
+  ],
+  "bg": "s04/bg.webp"
+ },
+ "s05": {
+  "folder": "slide 5",
+  "reference": "reference/s05.jpg",
+  "elements": {
+   "lampu": {
+    "src": "s05/lampu.webp",
+    "box": [
+     1018,
+     361,
+     1409,
+     825
+    ]
+   },
+   "panah": {
+    "src": "s05/panah.webp",
+    "box": [
+     1028,
+     227,
+     1268,
+     365
+    ]
+   },
+   "mobil": {
+    "src": "s05/mobil.webp",
+    "box": [
+     342,
+     671,
+     1018,
+     979
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {
+   "kalimat": [
+    390,
+    238,
+    959,
+    345
+   ]
+  },
+  "library": [
+   {
+    "name": "background",
+    "file": "background .jpeg",
+    "src": "library/s05/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "kalimat",
+    "file": "kalimat .jpg",
+    "src": "library/s05/kalimat.webp",
+    "box": [
+     390,
+     238,
+     959,
+     345
+    ]
+   },
+   {
+    "name": "lampu-lalu-lintas-kuning",
+    "file": "lampu lalu lintas kuning .jpg",
+    "src": "library/s05/lampu-lalu-lintas-kuning.webp",
+    "box": [
+     1018,
+     361,
+     1409,
+     825
+    ]
+   },
+   {
+    "name": "mobil",
+    "file": "mobil .jpg",
+    "src": "library/s05/mobil.webp",
+    "box": [
+     342,
+     671,
+     1018,
+     979
+    ]
+   },
+   {
+    "name": "panah",
+    "file": "panah .jpg",
+    "src": "library/s05/panah.webp",
+    "box": [
+     1028,
+     227,
+     1268,
+     365
+    ]
+   }
+  ],
+  "bg": "s05/bg.webp"
+ },
+ "s06": {
+  "folder": "slide 6",
+  "reference": "reference/s06.jpg",
+  "elements": {
+   "lampu": {
+    "src": "s06/lampu.webp",
+    "box": [
+     1018,
+     361,
+     1409,
+     825
+    ]
+   },
+   "panah": {
+    "src": "s06/panah.webp",
+    "box": [
+     951,
+     230,
+     1191,
+     369
+    ]
+   },
+   "mobil": {
+    "src": "s06/mobil.webp",
+    "box": [
+     930,
+     671,
+     1605,
+     979
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {
+   "kalimat": [
+    415,
+    234,
+    928,
+    330
+   ]
+  },
+  "library": [
+   {
+    "name": "background",
+    "file": "background .jpeg",
+    "src": "library/s06/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "kalimat",
+    "file": "kalimat .jpg",
+    "src": "library/s06/kalimat.webp",
+    "box": [
+     415,
+     234,
+     928,
+     330
+    ]
+   },
+   {
+    "name": "lampu-lalu-lintas-hijau",
+    "file": "lampu lalu lintas hijau .jpg",
+    "src": "library/s06/lampu-lalu-lintas-hijau.webp",
+    "box": [
+     1018,
+     361,
+     1409,
+     825
+    ]
+   },
+   {
+    "name": "mobil",
+    "file": "mobil .jpg",
+    "src": "library/s06/mobil.webp",
+    "box": [
+     930,
+     671,
+     1605,
+     979
+    ]
+   },
+   {
+    "name": "tanda-panah",
+    "file": "tanda panah.jpg",
+    "src": "library/s06/tanda-panah.webp",
+    "box": [
+     951,
+     230,
+     1191,
+     369
+    ]
+   }
+  ],
+  "bg": "s06/bg.webp"
+ },
+ "s08": {
+  "folder": "slide 8",
+  "reference": "reference/s08.jpg",
+  "elements": {
+   "mobil": {
+    "src": "s08/mobil.webp",
+    "box": [
+     770,
+     705,
+     1532,
+     1051
+    ]
+   },
+   "bubble": {
+    "src": "s08/bubble.webp",
+    "box": [
+     856,
+     456,
+     1202,
+     728
+    ]
+   }
+  },
+  "rects": {},
+  "texts": {},
+  "library": [
+   {
+    "name": "background",
+    "file": "background .jpeg",
+    "src": "library/s08/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "bubble-percakapan",
+    "file": "bubble percakapan .jpeg",
+    "src": "library/s08/bubble-percakapan.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     959
+    ]
+   },
+   {
+    "name": "mobil",
+    "file": "mobil .jpeg",
+    "src": "library/s08/mobil.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1014
+    ]
+   }
+  ],
+  "bg": "s08/bg.webp"
+ },
+ "s09": {
+  "folder": "slide 9",
+  "reference": "reference/s09.jpg",
+  "elements": {},
+  "rects": {
+   "air-paradise": [
+    411,
+    481,
+    813,
+    599
+   ],
+   "wild-safari": [
+    858,
+    661,
+    1259,
+    780
+   ],
+   "sea-world": [
+    1459,
+    495,
+    1860,
+    636
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "air-paradise-text-to-audio",
+    "file": "air paradise text to audio .jpg",
+    "src": "library/s09/air-paradise-text-to-audio.webp",
+    "box": [
+     421,
+     514,
+     810,
+     582
+    ]
+   },
+   {
+    "name": "background",
+    "file": "background .jpg",
+    "src": "library/s09/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "button",
+    "file": "button.jpg",
+    "src": "library/s09/button.webp",
+    "box": [
+     858,
+     661,
+     1259,
+     780
+    ]
+   },
+   {
+    "name": "sea-world-text-to-audio",
+    "file": "sea world text to audio .jpg",
+    "src": "library/s09/sea-world-text-to-audio.webp",
+    "box": [
+     1499,
+     541,
+     1814,
+     594
+    ]
+   },
+   {
+    "name": "wild-text-to-audio",
+    "file": "wild text to audio.jpg",
+    "src": "library/s09/wild-text-to-audio.webp",
+    "box": [
+     892,
+     695,
+     1229,
+     749
+    ]
+   }
+  ],
+  "bg": "s09/bg.webp"
+ },
+ "s09-1": {
+  "folder": "slide 9-1",
+  "reference": "reference/s09-1.jpg",
+  "elements": {
+   "angsa": {
+    "src": "s09-1/angsa.webp",
+    "box": [
+     1142,
+     683,
+     1862,
+     1060
+    ]
+   }
+  },
+  "rects": {
+   "question": [
+    529,
+    37,
+    1396,
+    203
+   ],
+   "opt-swan": [
+    357,
+    231,
+    757,
+    362
+   ],
+   "opt-rabbit": [
+    1136,
+    230,
+    1536,
+    362
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "air",
+    "file": "air .jpg",
+    "src": "library/s09-1/air.webp",
+    "box": [
+     850,
+     627,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "angsa",
+    "file": "angsa .jpg",
+    "src": "library/s09-1/angsa.webp",
+    "box": [
+     1142,
+     683,
+     1862,
+     1060
+    ]
+   },
+   {
+    "name": "awan",
+    "file": "awan .jpeg",
+    "src": "library/s09-1/awan.webp",
+    "box": [
+     0,
+     0,
+     1919,
+     785
+    ]
+   },
+   {
+    "name": "background",
+    "file": "background .jpeg",
+    "src": "library/s09-1/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "button",
+    "file": "button .jpg",
+    "src": "library/s09-1/button.webp",
+    "box": [
+     1135,
+     231,
+     1537,
+     362
+    ]
+   },
+   {
+    "name": "jawaban-benar",
+    "file": "jawaban benar.jpg",
+    "src": "library/s09-1/jawaban-benar.webp",
+    "box": [
+     200,
+     355,
+     1630,
+     741
+    ]
+   },
+   {
+    "name": "kalimat-pertanyaan-what-is-this-animal",
+    "file": "kalimat pertanyaan what is this animal.jpg",
+    "src": "library/s09-1/kalimat-pertanyaan-what-is-this-animal.webp",
+    "box": [
+     556,
+     62,
+     1389,
+     133
+    ]
+   },
+   {
+    "name": "pagar",
+    "file": "pagar .jpg",
+    "src": "library/s09-1/pagar.webp",
+    "box": [
+     785,
+     509,
+     1341,
+     1080
+    ]
+   },
+   {
+    "name": "pilihan-jawaban-1",
+    "file": "pilihan jawaban (1).jpg",
+    "src": "library/s09-1/pilihan-jawaban-1.webp",
+    "box": [
+     1191,
+     245,
+     1471,
+     323
+    ]
+   },
+   {
+    "name": "pilihan-jawaban",
+    "file": "pilihan jawaban .jpg",
+    "src": "library/s09-1/pilihan-jawaban.webp",
+    "box": [
+     411,
+     274,
+     653,
+     323
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput .jpeg",
+    "src": "library/s09-1/rumput.webp",
+    "box": [
+     0,
+     283,
+     1920,
+     711
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput .jpg",
+    "src": "library/s09-1/rumput.webp",
+    "box": [
+     0,
+     626,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "semk-semak",
+    "file": "semk semak.jpg",
+    "src": "library/s09-1/semk-semak.webp",
+    "box": [
+     0,
+     449,
+     1897,
+     714
+    ]
+   }
+  ],
+  "bg": "s09-1/bg.webp"
+ },
+ "s10": {
+  "folder": "slide 10",
+  "reference": "reference/s10.jpg",
+  "elements": {
+   "kupu": {
+    "src": "s10/kupu.webp",
+    "box": [
+     503,
+     440,
+     1538,
+     849
+    ]
+   }
+  },
+  "rects": {
+   "question": [
+    551,
+    0,
+    1422,
+    182
+   ],
+   "opt-butterfly": [
+    357,
+    231,
+    757,
+    362
+   ],
+   "opt-bird": [
+    1136,
+    230,
+    1536,
+    362
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan .jpeg",
+    "src": "library/s10/awan.webp",
+    "box": [
+     0,
+     0,
+     1919,
+     785
+    ]
+   },
+   {
+    "name": "bunga",
+    "file": "bunga .jpg",
+    "src": "library/s10/bunga.webp",
+    "box": [
+     666,
+     591,
+     1144,
+     1080
+    ]
+   },
+   {
+    "name": "button",
+    "file": "button.jpg",
+    "src": "library/s10/button.webp",
+    "box": [
+     527,
+     38,
+     1396,
+     198
+    ]
+   },
+   {
+    "name": "halaman",
+    "file": "halaman .jpeg",
+    "src": "library/s10/halaman.webp",
+    "box": [
+     0,
+     283,
+     1920,
+     711
+    ]
+   },
+   {
+    "name": "jawaban-benar",
+    "file": "jawaban benar .jpg",
+    "src": "library/s10/jawaban-benar.webp",
+    "box": [
+     346,
+     258,
+     1481,
+     596
+    ]
+   },
+   {
+    "name": "kalimat-pertanyaan",
+    "file": "kalimat pertanyaan .jpg",
+    "src": "library/s10/kalimat-pertanyaan.webp",
+    "box": [
+     527,
+     38,
+     1396,
+     198
+    ]
+   },
+   {
+    "name": "kupu-kupu",
+    "file": "kupu kupu .jpg",
+    "src": "library/s10/kupu-kupu.webp",
+    "box": [
+     503,
+     440,
+     1538,
+     849
+    ]
+   },
+   {
+    "name": "pahar",
+    "file": "pahar.jpg",
+    "src": "library/s10/pahar.webp",
+    "box": [
+     785,
+     509,
+     1341,
+     1080
+    ]
+   },
+   {
+    "name": "pilihan-jawaban-1",
+    "file": "pilihan jawaban (1).jpg",
+    "src": "library/s10/pilihan-jawaban-1.webp",
+    "box": [
+     1233,
+     245,
+     1413,
+     323
+    ]
+   },
+   {
+    "name": "pilihan-jawaban",
+    "file": "pilihan jawaban .jpg",
+    "src": "library/s10/pilihan-jawaban.webp",
+    "box": [
+     372,
+     244,
+     768,
+     344
+    ]
+   },
+   {
+    "name": "pohon",
+    "file": "pohon .jpg",
+    "src": "library/s10/pohon.webp",
+    "box": [
+     16,
+     118,
+     1891,
+     651
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput .jpg",
+    "src": "library/s10/rumput.webp",
+    "box": [
+     0,
+     449,
+     1897,
+     714
+    ]
+   },
+   {
+    "name": "tanah",
+    "file": "tanah .jpg",
+    "src": "library/s10/tanah.webp",
+    "box": [
+     0,
+     626,
+     1920,
+     1080
+    ]
+   }
+  ],
+  "bg": "s10/bg.webp"
+ },
+ "s11": {
+  "folder": "slide 11",
+  "reference": "reference/s11.jpg",
+  "elements": {},
+  "rects": {
+   "air-paradise": [
+    411,
+    481,
+    813,
+    599
+   ],
+   "wild-safari": [
+    858,
+    661,
+    1259,
+    780
+   ],
+   "sea-world": [
+    1459,
+    495,
+    1860,
+    636
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "background",
+    "file": "background .jpg",
+    "src": "library/s11/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "button",
+    "file": "button .jpg",
+    "src": "library/s11/button.webp",
+    "box": [
+     858,
+     661,
+     1259,
+     780
+    ]
+   },
+   {
+    "name": "text-to-audio-air",
+    "file": "text to audio air.jpg",
+    "src": "library/s11/text-to-audio-air.webp",
+    "box": [
+     421,
+     514,
+     810,
+     582
+    ]
+   },
+   {
+    "name": "text-to-audio-sea-world-jpg",
+    "file": "text to audio sea world jpg.jpg",
+    "src": "library/s11/text-to-audio-sea-world-jpg.webp",
+    "box": [
+     1499,
+     541,
+     1814,
+     594
+    ]
+   },
+   {
+    "name": "text-to-audio-wild",
+    "file": "text to audio wild .jpg",
+    "src": "library/s11/text-to-audio-wild.webp",
+    "box": [
+     892,
+     695,
+     1229,
+     749
+    ]
+   }
+  ],
+  "bg": "s11/bg.webp"
+ },
+ "s11-1": {
+  "folder": "slide 11-1",
+  "reference": "reference/s11-1.jpg",
+  "elements": {
+   "gajah": {
+    "src": "s11-1/gajah.webp",
+    "box": [
+     69,
+     197,
+     1554,
+     989
+    ]
+   }
+  },
+  "rects": {
+   "opt-big": [
+    944,
+    180,
+    1348,
+    314
+   ],
+   "opt-small": [
+    1474,
+    181,
+    1856,
+    306
+   ]
+  },
+  "texts": {
+   "question": [
+    715,
+    34,
+    1879,
+    125
+   ]
+  },
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan.jpg",
+    "src": "library/s11-1/awan.webp",
+    "box": [
+     0,
+     0,
+     1919,
+     785
+    ]
+   },
+   {
+    "name": "button",
+    "file": "button.jpg",
+    "src": "library/s11-1/button.webp",
+    "box": [
+     527,
+     38,
+     1396,
+     198
+    ]
+   },
+   {
+    "name": "gajah-hewan",
+    "file": "gajah hewan.jpg",
+    "src": "library/s11-1/gajah-hewan.webp",
+    "box": [
+     69,
+     197,
+     1554,
+     989
+    ]
+   },
+   {
+    "name": "halaman",
+    "file": "halaman_.jpg",
+    "src": "library/s11-1/halaman.webp",
+    "box": [
+     0,
+     283,
+     1920,
+     711
+    ]
+   },
+   {
+    "name": "jawaban-benar",
+    "file": "jawaban benar .jpg",
+    "src": "library/s11-1/jawaban-benar.webp",
+    "box": [
+     289,
+     384,
+     1756,
+     543
+    ]
+   },
+   {
+    "name": "pagar",
+    "file": "pagar.jpg",
+    "src": "library/s11-1/pagar.webp",
+    "box": [
+     0,
+     769,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "pilihan-jawaban-1",
+    "file": "pilihan jawaban (1).jpg",
+    "src": "library/s11-1/pilihan-jawaban-1.webp",
+    "box": [
+     1091,
+     209,
+     1207,
+     290
+    ]
+   },
+   {
+    "name": "pilihan-jawaban",
+    "file": "pilihan jawaban .jpg",
+    "src": "library/s11-1/pilihan-jawaban.webp",
+    "box": [
+     1561,
+     214,
+     1768,
+     276
+    ]
+   },
+   {
+    "name": "pohon",
+    "file": "pohon.jpg",
+    "src": "library/s11-1/pohon.webp",
+    "box": [
+     16,
+     118,
+     1891,
+     651
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput.jpg",
+    "src": "library/s11-1/rumput.webp",
+    "box": [
+     0,
+     626,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "semak-semak",
+    "file": "semak semak.jpg",
+    "src": "library/s11-1/semak-semak.webp",
+    "box": [
+     0,
+     449,
+     1897,
+     714
+    ]
+   },
+   {
+    "name": "what-is-this-animal",
+    "file": "what is this animal.jpg",
+    "src": "library/s11-1/what-is-this-animal.webp",
+    "box": [
+     715,
+     34,
+     1879,
+     125
+    ]
+   }
+  ],
+  "bg": "s11-1/bg.webp"
+ },
+ "s12": {
+  "folder": "slide 12",
+  "reference": "reference/s12.jpg",
+  "elements": {},
+  "rects": {
+   "opt-meat": [
+    626,
+    361,
+    1078,
+    513
+   ],
+   "opt-grass": [
+    1358,
+    361,
+    1810,
+    509
+   ]
+  },
+  "texts": {
+   "question": [
+    603,
+    26,
+    1864,
+    288
+   ]
+  },
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan.jpg",
+    "src": "library/s12/awan.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     797
+    ]
+   },
+   {
+    "name": "button",
+    "file": "button.jpg",
+    "src": "library/s12/button.webp",
+    "box": [
+     527,
+     38,
+     1396,
+     198
+    ]
+   },
+   {
+    "name": "jawaban-benar",
+    "file": "jawaban benar .jpg",
+    "src": "library/s12/jawaban-benar.webp",
+    "box": [
+     312,
+     487,
+     1719,
+     625
+    ]
+   },
+   {
+    "name": "kalimat-pertanyaan",
+    "file": "kalimat pertanyaan .jpg",
+    "src": "library/s12/kalimat-pertanyaan.webp",
+    "box": [
+     603,
+     26,
+     1864,
+     288
+    ]
+   },
+   {
+    "name": "macan-hewan",
+    "file": "macan hewan.jpg",
+    "src": "library/s12/macan-hewan.webp",
+    "box": [
+     0,
+     363,
+     871,
+     1080
+    ]
+   },
+   {
+    "name": "pagar",
+    "file": "pagar.jpg",
+    "src": "library/s12/pagar.webp",
+    "box": [
+     0,
+     769,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "pilihan-jawaban-1",
+    "file": "pilihan jawaban (1).jpg",
+    "src": "library/s12/pilihan-jawaban-1.webp",
+    "box": [
+     1452,
+     362,
+     1750,
+     464
+    ]
+   },
+   {
+    "name": "pilihan-jawaban",
+    "file": "pilihan jawaban .jpg",
+    "src": "library/s12/pilihan-jawaban.webp",
+    "box": [
+     711,
+     476,
+     1000,
+     558
+    ]
+   },
+   {
+    "name": "rumput",
+    "file": "rumput.jpeg",
+    "src": "library/s12/rumput.webp",
+    "box": [
+     0,
+     744,
+     1916,
+     1080
+    ]
+   },
+   {
+    "name": "semak-semak",
+    "file": "semak semak.jpg",
+    "src": "library/s12/semak-semak.webp",
+    "box": [
+     0,
+     442,
+     1920,
+     1080
+    ]
+   }
+  ],
+  "bg": "s12/bg.webp"
+ },
+ "s13": {
+  "folder": "slide 13",
+  "reference": "reference/s13.jpg",
+  "elements": {
+   "jerapah": {
+    "src": "s13/jerapah.webp",
+    "box": [
+     154,
+     228,
+     1051,
+     1053
+    ]
+   }
+  },
+  "rects": {
+   "opt-yes": [
+    1077,
+    188,
+    1421,
+    302
+   ],
+   "opt-no": [
+    1499,
+    188,
+    1843,
+    302
+   ]
+  },
+  "texts": {
+   "question": [
+    847,
+    48,
+    1847,
+    168
+   ]
+  },
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan .jpeg",
+    "src": "library/s13/awan.webp",
+    "box": [
+     0,
+     0,
+     1919,
+     785
+    ]
+   },
+   {
+    "name": "gerapah",
+    "file": "gerapah .jpg",
+    "src": "library/s13/gerapah.webp",
+    "box": [
+     154,
+     228,
+     1051,
+     1053
+    ]
+   },
+   {
+    "name": "jawaban-benar",
+    "file": "jawaban benar .jpg",
+    "src": "library/s13/jawaban-benar.webp",
+    "box": [
+     361,
+     493,
+     1556,
+     590
+    ]
+   },
+   {
+    "name": "pertanyaan",
+    "file": "pertanyaan .jpg",
+    "src": "library/s13/pertanyaan.webp",
+    "box": [
+     847,
+     48,
+     1847,
+     168
+    ]
+   },
+   {
+    "name": "pilihan-jawaban-1",
+    "file": "pilihan jawaban (1).jpg",
+    "src": "library/s13/pilihan-jawaban-1.webp",
+    "box": [
+     1593,
+     190,
+     1709,
+     256
+    ]
+   },
+   {
+    "name": "pilihan-jawaban",
+    "file": "pilihan jawaban .jpg",
+    "src": "library/s13/pilihan-jawaban.webp",
+    "box": [
+     1161,
+     212,
+     1310,
+     278
+    ]
+   },
+   {
+    "name": "pohon",
+    "file": "pohon .jpeg",
+    "src": "library/s13/pohon.webp",
+    "box": [
+     0,
+     167,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "semak-semak",
+    "file": "semak semak .jpg",
+    "src": "library/s13/semak-semak.webp",
+    "box": [
+     0,
+     750,
+     1920,
+     1080
+    ]
+   }
+  ],
+  "bg": "s13/bg.webp"
+ },
+ "s14": {
+  "folder": "slide 14",
+  "reference": "reference/s14.jpg",
+  "elements": {},
+  "rects": {
+   "air-paradise": [
+    411,
+    481,
+    813,
+    599
+   ],
+   "wild-safari": [
+    858,
+    661,
+    1259,
+    780
+   ],
+   "sea-world": [
+    1459,
+    495,
+    1860,
+    636
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "background",
+    "file": "background .jpg",
+    "src": "library/s14/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "button",
+    "file": "button .jpg",
+    "src": "library/s14/button.webp",
+    "box": [
+     858,
+     661,
+     1259,
+     780
+    ]
+   },
+   {
+    "name": "text-to-audio-air",
+    "file": "text to audio air.jpg",
+    "src": "library/s14/text-to-audio-air.webp",
+    "box": [
+     421,
+     514,
+     810,
+     582
+    ]
+   },
+   {
+    "name": "text-to-audio-sea",
+    "file": "text to audio sea.jpg",
+    "src": "library/s14/text-to-audio-sea.webp",
+    "box": [
+     1499,
+     541,
+     1814,
+     594
+    ]
+   },
+   {
+    "name": "text-to-audio-wild",
+    "file": "text to audio wild.jpg",
+    "src": "library/s14/text-to-audio-wild.webp",
+    "box": [
+     892,
+     695,
+     1229,
+     749
+    ]
+   }
+  ],
+  "bg": "s14/bg.webp"
+ },
+ "s14-1": {
+  "folder": "slide 14-1",
+  "reference": "reference/s14-1.jpg",
+  "elements": {},
+  "rects": {
+   "label-monkey": [
+    789,
+    191,
+    1322,
+    366
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "awan",
+    "file": "awan .jpeg",
+    "src": "library/s14-1/awan.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     797
+    ]
+   },
+   {
+    "name": "button",
+    "file": "button.jpg",
+    "src": "library/s14-1/button.webp",
+    "box": [
+     527,
+     38,
+     1396,
+     198
+    ]
+   },
+   {
+    "name": "monyet",
+    "file": "monyet .jpg",
+    "src": "library/s14-1/monyet.webp",
+    "box": [
+     0,
+     145,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "pagar",
+    "file": "pagar .jpg",
+    "src": "library/s14-1/pagar.webp",
+    "box": [
+     0,
+     917,
+     1920,
+     1080
+    ]
+   },
+   {
+    "name": "semak-semak",
+    "file": "semak semak .jpeg",
+    "src": "library/s14-1/semak-semak.webp",
+    "box": [
+     0,
+     744,
+     1916,
+     1080
+    ]
+   },
+   {
+    "name": "text-to-audio",
+    "file": "text to audio .jpg",
+    "src": "library/s14-1/text-to-audio.webp",
+    "box": [
+     827,
+     234,
+     1290,
+     354
+    ]
+   }
+  ],
+  "bg": "s14-1/bg.webp"
+ },
+ "s15": {
+  "folder": "slide 15",
+  "reference": "reference/s15.jpg",
+  "elements": {
+   "kura": {
+    "src": "s15/kura.webp",
+    "box": [
+     365,
+     126,
+     677,
+     403
+    ]
+   },
+   "lumba": {
+    "src": "s15/lumba.webp",
+    "box": [
+     941,
+     99,
+     1451,
+     449
+    ]
+   },
+   "paus": {
+    "src": "s15/paus.webp",
+    "box": [
+     369,
+     463,
+     1452,
+     1004
+    ]
+   }
+  },
+  "rects": {
+   "label-turtle": [
+    28,
+    208,
+    370,
+    320
+   ],
+   "label-dolphin": [
+    1458,
+    176,
+    1897,
+    320
+   ],
+   "label-whale": [
+    1226,
+    733,
+    1858,
+    968
+   ]
+  },
+  "texts": {},
+  "library": [
+   {
+    "name": "background",
+    "file": "background .jpeg",
+    "src": "library/s15/background.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   },
+   {
+    "name": "button",
+    "file": "button.jpg",
+    "src": "library/s15/button.webp",
+    "box": [
+     527,
+     38,
+     1396,
+     198
+    ]
+   },
+   {
+    "name": "kura-kura",
+    "file": "kura kura .jpg",
+    "src": "library/s15/kura-kura.webp",
+    "box": [
+     365,
+     126,
+     677,
+     403
+    ]
+   },
+   {
+    "name": "lumba-lumba",
+    "file": "lumba lumba .jpg",
+    "src": "library/s15/lumba-lumba.webp",
+    "box": [
+     941,
+     99,
+     1451,
+     449
+    ]
+   },
+   {
+    "name": "paus",
+    "file": "paus .jpg",
+    "src": "library/s15/paus.webp",
+    "box": [
+     369,
+     463,
+     1452,
+     1004
+    ]
+   },
+   {
+    "name": "text-to-audio-dolphin",
+    "file": "text to audio dolphin .jpg",
+    "src": "library/s15/text-to-audio-dolphin.webp",
+    "box": [
+     1481,
+     209,
+     1871,
+     314
+    ]
+   },
+   {
+    "name": "text-to-audio-turtle",
+    "file": "text to audio turtle.jpg",
+    "src": "library/s15/text-to-audio-turtle.webp",
+    "box": [
+     49,
+     218,
+     340,
+     300
+    ]
+   },
+   {
+    "name": "whale-text-to-audio",
+    "file": "whale text to audio .jpg",
+    "src": "library/s15/whale-text-to-audio.webp",
+    "box": [
+     1456,
+     803,
+     1803,
+     898
+    ]
+   }
+  ],
+  "bg": "s15/bg.webp"
+ },
+ "s16": {
+  "folder": "slide 16",
+  "reference": "reference/s16.jpg",
+  "elements": {},
+  "rects": {},
+  "texts": {},
+  "library": [
+   {
+    "name": "ending",
+    "file": "ending .jpeg",
+    "src": "library/s16/ending.webp",
+    "box": [
+     0,
+     0,
+     1920,
+     1080
+    ],
+    "full": true
+   }
+  ],
+  "bg": "s16/bg.webp"
+ },
+ "_ui": {
+  "buttonCream": "ui/button-cream.webp",
+  "buttonPink": "ui/button-pink.webp"
+ }
+}

@@ -1,0 +1,321 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>Dokumentasi Teknis</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@page {
+  size: A4;
+  margin: 18mm 17mm 20mm 17mm;
+  @bottom-left { content: "Petualangan Kuis · T1126-046 (REQ-9724)"; font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+  @bottom-right { content: "Halaman " counter(page) " / " counter(pages); font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+}
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif; font-size: 10.2pt; line-height: 1.55; color: #1e1b3a; margin: 0; }
+h1, h2, h3, h4 { font-family: 'Fredoka', 'Nunito', 'Segoe UI', sans-serif; color: #3b1f8f; line-height: 1.25; break-after: avoid; }
+h1 { font-size: 21pt; margin: 0 0 4mm; padding-bottom: 3mm; border-bottom: 3px solid #7c3aed; }
+h2 { font-size: 14.5pt; margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 4px solid #f59e0b; }
+h3 { font-size: 11.5pt; margin: 5mm 0 2mm; color: #5b21b6; }
+h4 { font-size: 10.5pt; margin: 4mm 0 1.5mm; }
+p { margin: 0 0 2.5mm; }
+a { color: #6d28d9; text-decoration: none; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+li { margin: 0.6mm 0; }
+blockquote { margin: 3mm 0; padding: 2.5mm 4mm; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 0 6px 6px 0; color: #3f3a5c; }
+blockquote p { margin: 0; }
+code { font-family: Consolas, 'Cascadia Mono', monospace; font-size: 8.8pt; background: #f1effa; padding: 0.3mm 1.2mm; border-radius: 3px; color: #4c1d95; }
+pre { background: #1e1b2e; color: #ece9ff; padding: 3.5mm 4mm; border-radius: 8px; font-size: 8pt; line-height: 1.45; white-space: pre; overflow: hidden; break-inside: avoid; }
+pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; break-inside: auto; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { background: #5b21b6; color: #fff; text-align: left; padding: 2mm 2.5mm; font-weight: 800; }
+td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #e4e1f2; vertical-align: top; }
+tr:nth-child(even) td { background: #faf9ff; }
+hr { border: 0; border-top: 1px dashed #d6d1ee; margin: 5mm 0; }
+.doc-meta { display: flex; gap: 3mm; flex-wrap: wrap; margin: -1mm 0 5mm; }
+.doc-meta span { font-size: 8.5pt; font-weight: 800; color: #5b21b6; background: #ede9fe; padding: 1mm 2.5mm; border-radius: 99px; }
+</style></head><body><h1>Petualangan Kuis — Web Game E-Learning Interaktif</h1><div class="doc-meta"><span>T1126-046 (REQ-9724)</span><span>Dokumentasi Teknis</span><span>18 November 2026</span></div>
+<p>Game kuis bergaya Kahoot / Quizizz untuk e-learning, dibangun dengan <strong>React (Vite) + Tailwind CSS v4</strong>.</p>
+<ul>
+<li><strong>Sentuh teks → dibacakan.</strong> Soal, pilihan jawaban, dan penjelasan bisa disentuh untuk dibacakan
+  (file rekaman <code>.mp3</code>/<code>.wav</code> jika ada, otomatis <em>fallback</em> ke Web Speech API).</li>
+<li><strong>Siap dikuliti aset Canva.</strong> Background, logo, frame soal, tombol, maskot, badge &amp; bintang
+  tinggal diganti file PNG/JPG/SVG — tanpa mengubah komponen.</li>
+<li><strong>Tampil rapi tanpa aset.</strong> Selama gambar belum ada, UI memakai gaya Tailwind bawaan.</li>
+<li><strong>SFX tanpa file.</strong> Klik, benar (ding), salah (buzz), detak timer, dan fanfare dibuat dengan Web Audio API.</li>
+</ul>
+<hr />
+<h2>1. Menjalankan Proyek</h2>
+<p>Butuh <strong>Node.js 18+</strong>.</p>
+<pre><code class="language-bash">npm install        # pasang dependensi (sekali saja)
+npm run dev        # mode pengembangan → buka http://localhost:5173
+npm run build      # build produksi → folder dist/
+npm run preview    # cek hasil build secara lokal
+</code></pre>
+<p><code>npm run dev</code> juga menampilkan alamat <strong>Network</strong> (mis. <code>http://192.168.1.10:5173</code>) —
+buka dari HP di Wi-Fi yang sama untuk mencoba layar sentuh.</p>
+<p><strong>Deploy:</strong> unggah isi folder <code>dist/</code> ke hosting statis mana pun (Netlify, Vercel, GitHub Pages,
+cPanel, atau subfolder LMS). Path sudah relatif (<code>base: './'</code>), jadi bisa ditaruh di subfolder.
+Langkah lengkap per layanan: <strong>docs/PANDUAN-HOSTING.md</strong>.</p>
+<hr />
+<h2>2. Struktur Folder</h2>
+<pre><code>elearning-quiz-game/
+├── index.html                    ← halaman utama + font Google
+├── vite.config.js                ← konfigurasi Vite + plugin Tailwind
+├── .github/workflows/deploy.yml  ← deploy otomatis ke GitHub Pages
+├── docs/
+│   ├── PANDUAN-ASET-CANVA.md     ← daftar ukuran aset untuk desainer
+│   ├── PANDUAN-HOSTING.md        ← cara menjalankan &amp; online-kan (Netlify/Vercel/GitHub Pages)
+│   └── CHECKLIST-PENGUJIAN.md    ← daftar uji &amp; statusnya
+├── public/
+│   └── assets/
+│       ├── canva/                ← ✏️ TARUH GAMBAR CANVA DI SINI
+│       │   ├── backgrounds/      bg-main.png, bg-mobile.png
+│       │   ├── ui/               logo.png, card-frame.png, btn-option-1..4.png, btn-primary.png
+│       │   ├── characters/       mascot-idle.png, mascot-happy.png, mascot-sad.png
+│       │   ├── badges/           badge-gold/silver/bronze.png, star-on.png, star-off.png
+│       │   └── questions/        q1.png … q5.png
+│       └── audio/                ← (opsional) rekaman suara &amp; SFX
+│           ├── voice/
+│           └── sfx/
+└── src/
+    ├── main.jsx                  ← titik masuk React
+    ├── App.jsx                   ← pengatur alur layar (start → game → result → review)
+    ├── index.css                 ← Tailwind + font + animasi (shake, pop, confetti, …)
+    │
+    ├── config/
+    │   └── gameConfig.js         ← ✏️ PANEL KONTROL: aset, warna, timer, skor, teks UI
+    ├── data/
+    │   └── questionsData.js      ← ✏️ BANK SOAL
+    │
+    ├── audio/
+    │   ├── AudioProvider.jsx     ← pusat suara: speak(), stop(), sfx()
+    │   ├── sfx.js                ← synthesizer efek suara (Web Audio API)
+    │   └── voices.js             ← pemilih suara TTS terbaik per bahasa
+    │
+    ├── hooks/
+    │   ├── useQuizGame.js        ← mesin permainan (state, skor, timer, kunci jawaban)
+    │   ├── useAssetStatus.js     ← cek apakah gambar Canva ada
+    │   └── useCountUp.js         ← animasi angka skor
+    │
+    ├── lib/
+    │   ├── storage.js            ← localStorage yang aman
+    │   └── leaderboard.js        ← papan peringkat lokal
+    │
+    ├── components/
+    │   ├── canva/                ← komponen &quot;slot aset&quot;
+    │   │   ├── CanvaImage.jsx    gambar + fallback
+    │   │   ├── SkinSurface.jsx   wadah/tombol yang bisa diberi kulit gambar
+    │   │   ├── AppBackground.jsx latar belakang aplikasi
+    │   │   └── Mascot.jsx        maskot 3 ekspresi
+    │   ├── ui/
+    │   │   ├── SpeakableText.jsx ← teks yang dibacakan saat disentuh
+    │   │   ├── GameButton.jsx
+    │   │   ├── Toggle.jsx
+    │   │   └── SegmentedControl.jsx
+    │   └── game/
+    │       ├── TopBar.jsx        progress, skor, timer, streak
+    │       ├── QuestionCard.jsx  kartu soal + slot gambar
+    │       ├── OptionButton.jsx  kartu pilihan jawaban
+    │       ├── FeedbackPanel.jsx panel Benar!/Kurang Tepat!
+    │       └── Confetti.jsx
+    │
+    └── screens/
+        ├── StartScreen.jsx
+        ├── GameScreen.jsx
+        ├── ResultScreen.jsx
+        └── ReviewScreen.jsx
+</code></pre>
+<p><strong>Untuk klien, hanya 3 tempat yang perlu disentuh:</strong> <code>public/assets/</code>, <code>src/config/gameConfig.js</code>,
+dan <code>src/data/questionsData.js</code>.</p>
+<hr />
+<h2>3. Alur Kerja Kode (untuk sesi penjelasan)</h2>
+<h3>3.1 Lapisan aplikasi</h3>
+<pre><code>┌──────────────────────────────────────────────────────────────┐
+│  DATA &amp; KONFIGURASI   gameConfig.js · questionsData.js       │  ← diubah klien
+├──────────────────────────────────────────────────────────────┤
+│  LOGIKA               useQuizGame (skor, timer, kunci)       │
+│                       AudioProvider (TTS, file audio, SFX)   │
+├──────────────────────────────────────────────────────────────┤
+│  TAMPILAN             screens/*  →  components/*             │
+│                       SkinSurface / CanvaImage (slot Canva)  │
+└──────────────────────────────────────────────────────────────┘
+</code></pre>
+<p>Tampilan tidak menyimpan aturan main; logika tidak tahu soal warna/gambar. Itu sebabnya
+aset bisa diganti tanpa menyentuh logika, dan aturan main bisa diubah tanpa menyentuh tampilan.</p>
+<h3>3.2 Alur layar (<code>App.jsx</code>)</h3>
+<pre><code>start ──Mulai──► game ──Lihat Hasil──► result ──Review──► review
+  ▲                │                     │  ▲               │
+  └─────Keluar─────┘      Main Lagi ─────┘  └────Kembali────┘
+</code></pre>
+<h3>3.3 Mesin permainan (<code>useQuizGame.js</code>)</h3>
+<pre><code>   ┌────────────┐   pilih + Kunci / waktu habis   ┌────────────┐
+   │ answering  │ ──────────────────────────────► │  feedback  │
+   └────────────┘                                 └────────────┘
+         ▲                Soal Berikutnya               │
+         └──────────────────────────────────────────────┘
+</code></pre>
+<ul>
+<li><strong>Anti double-click:</strong> jawaban hanya diproses saat fase <code>answering</code>. Begitu terjawab, fase
+  pindah ke <code>feedback</code> dan semua tombol pilihan dinonaktifkan.</li>
+<li><strong>Skor ala Kahoot:</strong> <code>poin = 1000 × (0,5 + 0,5 × sisa_waktu/batas_waktu) + bonus beruntun</code>.</li>
+<li><strong>Timer berhenti saat suara dibacakan</strong> (<code>pauseWhileSpeaking</code>), agar anak yang mendengarkan tidak dirugikan.</li>
+</ul>
+<h3>3.4 Sistem suara (<code>AudioProvider.jsx</code>)</h3>
+<pre><code>Teks disentuh ──► speak({ id, text, lang, audioSrc })
+                     │
+                     ├─ audioSrc diisi?  ── ya ──► putar file .mp3/.wav
+                     │                                 └─ gagal/tidak ada ─┐
+                     └─ tidak ──────────────────────────────────────────────┴─► Web Speech API
+                                                                                (suara terbaik
+                                                                                 untuk bahasa itu)
+</code></pre>
+<ul>
+<li><code>speakingId</code> menandai teks mana yang sedang dibacakan → teks itu menyala kuning &amp; berdenyut.</li>
+<li>Menyentuh teks yang sedang dibacakan = berhenti.</li>
+<li><strong>Bahasa suara:</strong> <code>Otomatis</code> mengikuti <code>lang</code> tiap soal/pilihan (soal Indonesia dibaca suara
+  Indonesia, kata "Cat" dibaca suara Inggris). <code>Indonesia</code>/<code>English</code> memaksa satu bahasa.</li>
+</ul>
+<h3>3.5 Slot aset Canva (<code>SkinSurface</code> &amp; <code>CanvaImage</code>)</h3>
+<pre><code>useAssetStatus(path)
+   ├─ 'ok'    → pakai gambar Canva (gaya bawaan dilepas)
+   └─ lainnya → pakai gaya Tailwind bawaan (fallbackClassName / fallback)
+</code></pre>
+<p>Contoh nyata di <code>QuestionCard.jsx</code>:</p>
+<pre><code class="language-jsx">&lt;SkinSurface
+  src={ASSETS.cardFrame}                 // path gambar dari gameConfig
+  fallbackClassName=&quot;bg-white shadow-2xl p-7&quot;   // tampilan jika gambar belum ada
+  skinClassName=&quot;px-[9%] py-[8%]&quot;        // tampilan jika gambar sudah ada
+&gt;
+</code></pre>
+<hr />
+<h2>4. Panduan Kustomisasi</h2>
+<h3>4.1 Mengganti gambar dengan aset Canva</h3>
+<ol>
+<li>Ekspor dari Canva sesuai <code>docs/PANDUAN-ASET-CANVA.md</code>.</li>
+<li>Taruh di folder <code>public/assets/canva/...</code> dengan nama yang sama.</li>
+<li>Refresh browser. Selesai.</li>
+</ol>
+<p>Ingin nama/format lain (mis. <code>.svg</code> atau <code>.jpg</code>)? Ubah path di <code>ASSETS</code> (<code>src/config/gameConfig.js</code>):</p>
+<pre><code class="language-js">logo: canva('ui/logo-sekolah.svg'),
+background: canva('backgrounds/bg-main.jpg'),
+cardFrame: '',          // string kosong = selalu pakai gaya bawaan
+</code></pre>
+<h3>4.2 Menambah / mengubah soal (<code>src/data/questionsData.js</code>)</h3>
+<pre><code class="language-js">{
+  id: 'q6',
+  lang: 'id-ID',
+  question: 'Ibu kota Indonesia adalah …',
+  image: canva('questions/q6.png'),       // opsional
+  emoji: '🏙️',                             // pengganti gambar
+  options: [
+    { id: 'a', text: 'Jakarta' },
+    { id: 'b', text: 'Bandung' },
+  ],
+  correct: 'a',
+  explanation: 'Jakarta adalah ibu kota Indonesia.',
+}
+</code></pre>
+<ul>
+<li>2 sampai 4 pilihan per soal (layout menyesuaikan otomatis).</li>
+<li><code>speak</code> — teks bacaan berbeda dari teks tampilan (mis. <code>"7 × 8"</code> → <code>"tujuh dikali delapan"</code>).</li>
+<li><code>lang</code> per pilihan — untuk soal campuran bahasa (lihat soal 5).</li>
+<li><code>timeLimit</code> — batas waktu khusus soal tersebut.</li>
+</ul>
+<h3>4.3 Memakai rekaman suara sendiri</h3>
+<ol>
+<li>Taruh file di <code>public/assets/audio/voice/q1.mp3</code>.</li>
+<li>Di <code>questionsData.js</code>, ubah import menjadi <code>import { audio, canva } from '../config/gameConfig';</code></li>
+<li>Isi <code>audio: audio('voice/q1.mp3')</code> pada soal (juga bisa <code>explanationAudio</code>, atau <code>audio</code> di tiap pilihan).</li>
+</ol>
+<p>Jika file gagal diputar, game otomatis membacakan teks dengan Text-to-Speech.</p>
+<h3>4.4 Efek suara custom</h3>
+<p>Di <code>gameConfig.js</code> → <code>SFX_FILES</code>, misalnya <code>correct: audio('sfx/correct.mp3')</code>.
+Kosongkan untuk kembali ke synthesizer bawaan.</p>
+<h3>4.5 Aturan main (<code>GAME_SETTINGS</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Opsi</th>
+<th>Bawaan</th>
+<th>Fungsi</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>answerMode</code></td>
+<td><code>'confirm'</code></td>
+<td><code>'confirm'</code>: sentuh = dengar + pilih, lalu Kunci Jawaban (cocok untuk anak). <code>'tap'</code>: sentuh = langsung jawab (seperti Kahoot).</td>
+</tr>
+<tr>
+<td><code>autoReadQuestion</code></td>
+<td><code>true</code></td>
+<td>Bacakan soal otomatis saat muncul.</td>
+</tr>
+<tr>
+<td><code>timer.enabled</code> / <code>timer.seconds</code></td>
+<td><code>true</code> / <code>30</code></td>
+<td>Batas waktu per soal.</td>
+</tr>
+<tr>
+<td><code>timer.pauseWhileSpeaking</code></td>
+<td><code>true</code></td>
+<td>Timer berhenti saat suara diputar.</td>
+</tr>
+<tr>
+<td><code>scoring.basePoints</code></td>
+<td><code>1000</code></td>
+<td>Poin maksimal per soal.</td>
+</tr>
+<tr>
+<td><code>scoring.speedBonus</code></td>
+<td><code>true</code></td>
+<td>Jawaban lebih cepat = poin lebih besar.</td>
+</tr>
+<tr>
+<td><code>scoring.streakBonus</code></td>
+<td><code>100</code></td>
+<td>Bonus jawaban benar beruntun.</td>
+</tr>
+<tr>
+<td><code>starThresholds</code></td>
+<td><code>80 / 50 / 1</code></td>
+<td>Batas akurasi untuk 3/2/1 bintang.</td>
+</tr>
+<tr>
+<td><code>shuffleQuestions</code> / <code>shuffleOptions</code></td>
+<td><code>false</code></td>
+<td>Acak urutan soal / pilihan.</td>
+</tr>
+<tr>
+<td><code>speech.rate</code></td>
+<td><code>0.92</code></td>
+<td>Kecepatan suara pembaca.</td>
+</tr>
+<tr>
+<td><code>leaderboard.enabled</code></td>
+<td><code>true</code></td>
+<td>Papan peringkat (tersimpan di browser perangkat).</td>
+</tr>
+</tbody>
+</table>
+<h3>4.6 Warna &amp; teks</h3>
+<ul>
+<li>Warna bawaan tombol pilihan, kartu, dan latar: <code>THEME</code> di <code>gameConfig.js</code> (kelas Tailwind).</li>
+<li>Semua teks antarmuka (tombol, label, pesan): <code>UI_TEXT</code> di <code>gameConfig.js</code>.</li>
+<li>Font: <code>index.html</code> (link Google Fonts) + <code>--font-sans</code> / <code>--font-display</code> di <code>src/index.css</code>.</li>
+</ul>
+<hr />
+<h2>5. Catatan Teknis</h2>
+<ul>
+<li><strong>Kualitas suara TTS</strong> tergantung browser &amp; sistem operasi. Hasil terbaik: Chrome/Edge (suara
+  Google / Microsoft Natural) dan Safari iOS. Untuk Bahasa Indonesia di Windows, Edge biasanya
+  menyediakan suara "Microsoft Gadis Online (Natural)". Jika pelafalan kritis, pakai rekaman <code>.mp3</code>.</li>
+<li><strong>Kebijakan autoplay browser:</strong> suara baru bisa diputar setelah ada interaksi pertama
+  (tombol "Mulai Belajar" sudah memenuhi syarat ini).</li>
+<li><strong>Aset baru tidak muncul?</strong> Hasil pengecekan gambar disimpan sementara; refresh halaman setelah menambah file.</li>
+<li><strong>Papan peringkat</strong> saat ini lokal per perangkat. Untuk peringkat kelas bersama, ganti isi
+  <code>src/lib/leaderboard.js</code> dengan panggilan ke backend (Firebase/Supabase) — komponen lain tidak berubah.</li>
+<li><strong>Aksesibilitas:</strong> navigasi keyboard (angka 1–4 memilih, Enter mengunci), fokus terlihat, dan
+  animasi dikurangi otomatis bagi pengguna dengan pengaturan <em>reduce motion</em>.</li>
+</ul></body></html>

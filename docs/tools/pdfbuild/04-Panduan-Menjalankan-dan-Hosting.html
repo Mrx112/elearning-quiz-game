@@ -1,0 +1,146 @@
+<!doctype html><html lang="id"><head><meta charset="utf-8"><title>Panduan Hosting</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap');
+@page {
+  size: A4;
+  margin: 18mm 17mm 20mm 17mm;
+  @bottom-left { content: "Petualangan Kuis · T1126-046 (REQ-9724)"; font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+  @bottom-right { content: "Halaman " counter(page) " / " counter(pages); font: 8pt 'Nunito', 'Segoe UI', sans-serif; color: #8b8aa3; }
+}
+@page cover { margin: 0; @bottom-left { content: none; } @bottom-right { content: none; } }
+* { box-sizing: border-box; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Nunito', 'Segoe UI', system-ui, sans-serif; font-size: 10.2pt; line-height: 1.55; color: #1e1b3a; margin: 0; }
+h1, h2, h3, h4 { font-family: 'Fredoka', 'Nunito', 'Segoe UI', sans-serif; color: #3b1f8f; line-height: 1.25; break-after: avoid; }
+h1 { font-size: 21pt; margin: 0 0 4mm; padding-bottom: 3mm; border-bottom: 3px solid #7c3aed; }
+h2 { font-size: 14.5pt; margin: 7mm 0 2.5mm; padding-left: 3mm; border-left: 4px solid #f59e0b; }
+h3 { font-size: 11.5pt; margin: 5mm 0 2mm; color: #5b21b6; }
+h4 { font-size: 10.5pt; margin: 4mm 0 1.5mm; }
+p { margin: 0 0 2.5mm; }
+a { color: #6d28d9; text-decoration: none; }
+ul, ol { margin: 0 0 3mm; padding-left: 6mm; }
+li { margin: 0.6mm 0; }
+blockquote { margin: 3mm 0; padding: 2.5mm 4mm; background: #f5f3ff; border-left: 4px solid #8b5cf6; border-radius: 0 6px 6px 0; color: #3f3a5c; }
+blockquote p { margin: 0; }
+code { font-family: Consolas, 'Cascadia Mono', monospace; font-size: 8.8pt; background: #f1effa; padding: 0.3mm 1.2mm; border-radius: 3px; color: #4c1d95; }
+pre { background: #1e1b2e; color: #ece9ff; padding: 3.5mm 4mm; border-radius: 8px; font-size: 8pt; line-height: 1.45; white-space: pre; overflow: hidden; break-inside: avoid; }
+pre code { background: none; color: inherit; padding: 0; font-size: inherit; }
+table { width: 100%; border-collapse: collapse; margin: 2mm 0 4mm; font-size: 9pt; break-inside: auto; }
+thead { display: table-header-group; }
+tr { break-inside: avoid; }
+th { background: #5b21b6; color: #fff; text-align: left; padding: 2mm 2.5mm; font-weight: 800; }
+td { padding: 1.8mm 2.5mm; border-bottom: 1px solid #e4e1f2; vertical-align: top; }
+tr:nth-child(even) td { background: #faf9ff; }
+hr { border: 0; border-top: 1px dashed #d6d1ee; margin: 5mm 0; }
+.doc-meta { display: flex; gap: 3mm; flex-wrap: wrap; margin: -1mm 0 5mm; }
+.doc-meta span { font-size: 8.5pt; font-weight: 800; color: #5b21b6; background: #ede9fe; padding: 1mm 2.5mm; border-radius: 99px; }
+</style></head><body><h1>Panduan Menjalankan &amp; Meng-online-kan Website</h1><div class="doc-meta"><span>T1126-046 (REQ-9724)</span><span>Panduan Hosting</span><span>18 November 2026</span></div>
+<p>Panduan ini menjelaskan cara menjalankan game di komputer sendiri dan cara meng-online-kannya
+secara <strong>gratis</strong> agar bisa dibuka siswa dari HP atau laptop mana pun.</p>
+<hr />
+<h2>A. Menjalankan di Komputer Sendiri</h2>
+<p><strong>Persiapan (sekali saja):</strong> pasang <strong>Node.js versi LTS</strong> dari <a href="https://nodejs.org">https://nodejs.org</a>.</p>
+<ol>
+<li>Buka folder <code>elearning-quiz-game</code>.</li>
+<li>Klik kanan di dalam folder → <strong>Open in Terminal</strong> (Windows) / <strong>New Terminal at Folder</strong> (Mac).</li>
+<li>Ketik perintah berikut, tekan Enter setelah setiap baris:</li>
+</ol>
+<p><code>bash
+   npm install
+   npm run dev</code></p>
+<ol start="4">
+<li>Buka alamat yang muncul (biasanya <strong>http://localhost:5173</strong>) di Chrome atau Edge.</li>
+<li>Untuk mencoba di HP: sambungkan HP ke Wi-Fi yang sama, lalu buka alamat <strong>Network</strong>
+   yang tertulis di terminal (contoh: <code>http://192.168.1.10:5173</code>).</li>
+</ol>
+<p>Tekan <code>Ctrl + C</code> di terminal untuk menghentikan.</p>
+<hr />
+<h2>B. Membuat File Siap Upload</h2>
+<pre><code class="language-bash">npm run build
+</code></pre>
+<p>Hasilnya adalah folder <strong><code>dist/</code></strong>, berisi website yang siap diunggah.
+<strong>Folder <code>dist/</code> inilah yang di-upload ke hosting</strong>, bukan folder proyek seluruhnya.</p>
+<blockquote>
+<p>Setiap kali soal atau gambar diubah, jalankan <code>npm run build</code> lagi lalu upload ulang folder <code>dist/</code>.</p>
+</blockquote>
+<hr />
+<h2>C. Online Gratis — Pilih Salah Satu</h2>
+<h3>Opsi 1 · Netlify Drop (paling mudah, tanpa akun Git)</h3>
+<ol>
+<li>Jalankan <code>npm run build</code>.</li>
+<li>Buka <a href="https://app.netlify.com/drop">https://app.netlify.com/drop</a> dan login (gratis).</li>
+<li><strong>Seret folder <code>dist/</code></strong> ke halaman tersebut.</li>
+<li>Tunggu beberapa detik → muncul link, misalnya <code>https://nama-acak.netlify.app</code>.</li>
+<li>(Opsional) <strong>Site configuration → Change site name</strong> untuk mengganti nama link.</li>
+</ol>
+<p>Memperbarui: buka situs di Netlify → tab <strong>Deploys</strong> → seret folder <code>dist/</code> yang baru.</p>
+<h3>Opsi 2 · Vercel</h3>
+<ol>
+<li>Unggah folder proyek ke GitHub (lihat Opsi 3 langkah 1–2), <strong>atau</strong> pasang Vercel CLI.</li>
+<li>Buka <a href="https://vercel.com/new">https://vercel.com/new</a> → <strong>Import</strong> repository proyek ini.</li>
+<li>Vercel mengenali Vite secara otomatis:
+   - Build Command: <code>npm run build</code>
+   - Output Directory: <code>dist</code></li>
+<li>Klik <strong>Deploy</strong> → link seperti <code>https://nama-proyek.vercel.app</code>.</li>
+</ol>
+<p>Memperbarui: setiap perubahan yang di-push ke GitHub otomatis ter-deploy ulang.</p>
+<h3>Opsi 3 · GitHub Pages</h3>
+<p>Proyek sudah menyertakan file otomatisasi <code>.github/workflows/deploy.yml</code>.</p>
+<ol>
+<li>Buat repository baru di <a href="https://github.com/new">https://github.com/new</a>.</li>
+<li>Unggah seluruh isi folder proyek <strong>kecuali</strong> <code>node_modules/</code> dan <code>dist/</code>
+   (atau gunakan <code>git push</code>).</li>
+<li>Di repository: <strong>Settings → Pages → Build and deployment → Source: GitHub Actions</strong>.</li>
+<li>Buka tab <strong>Actions</strong> dan tunggu proses "Deploy ke GitHub Pages" selesai (±1–2 menit).</li>
+<li>Link tersedia di <strong>Settings → Pages</strong>, formatnya <code>https://&lt;username&gt;.github.io/&lt;nama-repo&gt;/</code>.</li>
+</ol>
+<p>Memperbarui: setiap push ke branch <code>main</code> otomatis ter-deploy ulang.</p>
+<h3>Opsi 4 · Hosting Biasa (cPanel) / LMS</h3>
+<p>Unggah <strong>isi</strong> folder <code>dist/</code> ke <code>public_html/</code> (atau subfolder mana pun) lewat File Manager.
+Path di dalam game sudah relatif, sehingga tetap berjalan di subfolder seperti
+<code>https://sekolah.sch.id/kuis/</code>.</p>
+<hr />
+<h2>D. Hal Penting Setelah Online</h2>
+<table>
+<thead>
+<tr>
+<th>Hal</th>
+<th>Keterangan</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Wajib HTTPS</strong></td>
+<td>Netlify, Vercel, dan GitHub Pages sudah otomatis HTTPS. Pada hosting biasa, aktifkan SSL agar fitur suara berjalan stabil.</td>
+</tr>
+<tr>
+<td><strong>Suara pembaca</strong></td>
+<td>Kualitas suara tergantung perangkat. Paling baik di Chrome/Edge (Android, Windows) dan Safari (iPhone/iPad).</td>
+</tr>
+<tr>
+<td><strong>Suara pertama</strong></td>
+<td>Browser baru mengizinkan suara setelah pengguna menekan tombol pertama ("Mulai Belajar"); ini normal.</td>
+</tr>
+<tr>
+<td><strong>Mode senyap HP</strong></td>
+<td>Di iPhone, matikan mode senyap (silent switch) agar suara terdengar.</td>
+</tr>
+<tr>
+<td><strong>Papan peringkat</strong></td>
+<td>Tersimpan di masing-masing perangkat/browser, tidak dibagikan antar-siswa.</td>
+</tr>
+<tr>
+<td><strong>Biaya</strong></td>
+<td>Ketiga layanan di atas gratis untuk penggunaan seperti ini. Domain sendiri (mis. <code>kuis-sekolah.com</code>) bersifat opsional dan berbayar.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>E. Mengganti Konten Setelah Online</h2>
+<ol>
+<li>Ganti gambar di <code>public/assets/canva/...</code> (nama file tetap sama) dan/atau edit soal di
+   <code>src/data/questionsData.js</code>.</li>
+<li>Cek di komputer: <code>npm run dev</code>.</li>
+<li>Build ulang: <code>npm run build</code>.</li>
+<li>Upload ulang folder <code>dist/</code> (Netlify / cPanel), atau push ke GitHub (Vercel / GitHub Pages).</li>
+</ol></body></html>
